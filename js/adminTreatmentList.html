@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Treatment List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="adminPatientList.html">Patient List</a></li>
+            <li><a href="adminDoctorList.html">Doctor List</a></li>
+            <li><a href="adminDepartmentList.html">Department List</a></li>
+            <li><a href="adminNurseList.html">Nurse List</a></li>
+            <li><a href="adminRoomList.html">Room List</a></li>
+            <li><a href="adminTreatmentList.html">Treatment List</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="treatment-list-container">
+            <h2>Treatment List</h2>
+            <button onclick="openAddModal()">Add Treatment</button>
+            <div class="search-container">
+                <input type="text" id="search-keyword" placeholder="Enter keyword to search">
+                <button onclick="searchTreatments()">Search</button>
+            </div>
+            <table id="treatment-table">
+                <thead>
+                    <tr>
+                        <th>Treatment ID</th>
+                        <th>Patient ID</th>
+                        <th>Doctor ID</th>
+                        <th>Treatment Date</th>
+                        <th>Treatment Details</th>
+                        <th>Prescription</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="treatment-list">
+                    <!-- 诊疗记录会动态加载在这里 -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态窗口，用于添加和编辑诊疗信息 -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Edit Treatment</h2>
+            <div id="treatmentID-container" style="display: none;">
+                <label for="edit-treatmentID">Treatment ID (Read Only):</label>
+                <input type="text" id="edit-treatmentID" readonly>
+            </div>
+            <label for="edit-patientID">Patient ID:</label>
+            <input type="text" id="edit-patientID">
+            <label for="edit-doctorID">Doctor ID:</label>
+            <input type="text" id="edit-doctorID">
+            <label for="edit-treatmentDate">Treatment Date:</label>
+            <input type="date" id="edit-treatmentDate">
+            <label for="edit-treatmentDetails">Treatment Details:</label>
+            <textarea id="edit-treatmentDetails" rows="4"></textarea>
+            <label for="edit-prescription">Prescription:</label>
+            <input type="text" id="edit-prescription">
+            <button onclick="saveTreatmentUpdate()">Save</button>
+        </div>
+    </div>
+
+    <script src="adminTreatmentList.js"></script>
+</body>
+</html>

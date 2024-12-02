@@ -1,0 +1,1044 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+/* styles.css */
+
+select {
+    margin-bottom: 10px;  
+}
+.profile-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+
+#role-name {
+    text-transform: capitalize;
+}
+/* 侧边栏样式 */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 主内容样式 */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.profile-info p {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#edit-button, #save-button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#edit-button:hover, #save-button:hover {
+    background: #0056b3;
+}
+.patient-list-container {
+    padding: 20px;
+}
+
+.patient-list-container {
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#search-keyword {
+    padding: 10px;
+    width: calc(100% - 120px);
+    margin-right: 10px;
+}
+
+#patient-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#patient-table th, #patient-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#patient-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#patient-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#patient-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+/* 模态窗口样式 */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+.modal button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal button:hover {
+    background: #0056b3;
+}
+/* 房间列表页面样式 */
+.room-list-container {
+    padding: 20px;
+}
+
+#room-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#room-table th, #room-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#room-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#room-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#room-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+/* 部门列表页面样式 */
+.department-list-container {
+    padding: 20px;
+}
+
+#department-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#department-table th, #department-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#department-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#department-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#department-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+/* 诊疗记录页面样式 */
+.treatment-list-container {
+    padding: 20px;
+}
+
+#treatment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#treatment-table th, #treatment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#treatment-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#treatment-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#treatment-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+/* 诊疗记录页面样式 */
+.treatment-list-container {
+    padding: 20px;
+}
+
+#treatment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#treatment-table th, #treatment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#treatment-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#treatment-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#treatment-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+/* 病人列表页面样式 */
+.patient-list-container {
+    padding: 20px;
+}
+
+#patient-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#patient-table th, #patient-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#patient-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#patient-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#patient-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+/* 医生列表页面样式 */
+.doctor-list-container {
+    padding: 20px;
+}
+
+#doctor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#doctor-table th, #doctor-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#doctor-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#doctor-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#doctor-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 部门列表页面样式 */
+.department-list-container {
+    padding: 20px;
+}
+
+#department-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#department-table th, #department-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#department-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#department-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#department-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 护士列表页面样式 */
+.nurse-list-container {
+    padding: 20px;
+}
+
+#nurse-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#nurse-table th, #nurse-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#nurse-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#nurse-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#nurse-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 房间列表页面样式 */
+.room-list-container {
+    padding: 20px;
+}
+
+#room-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#room-table th, #room-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#room-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#room-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#room-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 诊疗记录页面样式 */
+.treatment-list-container {
+    padding: 20px;
+}
+
+#treatment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#treatment-table th, #treatment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#treatment-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#treatment-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#treatment-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}

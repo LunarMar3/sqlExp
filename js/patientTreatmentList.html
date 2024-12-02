@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Treatment Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="patientProfile.html">Patient Profile</a></li>
+            <li><a href="patientTreatmentList.html">My Treatment Records</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="treatment-list-container">
+            <h2>My Treatment Records</h2>
+            <table id="treatment-table">
+                <thead>
+                    <tr>
+                        <th>Treatment ID</th>
+                        <th>Treatment Date</th>
+                        <th>Treatment Details</th>
+                        <th>Prescription</th>
+                    </tr>
+                </thead>
+                <tbody id="treatment-list">
+                    <!-- 诊疗记录会动态加载在这里 -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="patientTreatmentList.js"></script>
+</body>
+</html>

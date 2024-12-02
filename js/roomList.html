@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="doctorProfile.html">Doctor Profile</a></li>
+            <li><a href="patientList.html">Patient List</a></li>
+            <li><a href="roomList.html">Room List</a></li>
+            <li><a href="departmentList.html">Department List</a></li>
+            <li><a href="treatmentList.html">Treatment Records</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="room-list-container">
+            <h2>Room List</h2>
+            <div class="search-container">
+                <input type="text" id="search-keyword" placeholder="Enter keyword to search">
+                <button onclick="searchRooms()">Search</button>
+            </div>
+            <table id="room-table">
+                <thead>
+                    <tr>
+                        <th>Room ID</th>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Capacity</th>
+                        <th>Occupied Beds</th>
+                    </tr>
+                </thead>
+                <tbody id="room-list">
+                    <!-- 房间列表会动态加载在这里 -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="roomList.js"></script>
+</body>
+</html>

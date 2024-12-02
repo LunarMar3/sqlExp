@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Nurse List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="adminPatientList.html">Patient List</a></li>
+            <li><a href="adminDoctorList.html">Doctor List</a></li>
+            <li><a href="adminDepartmentList.html">Department List</a></li>
+            <li><a href="adminNurseList.html">Nurse List</a></li>
+            <li><a href="adminRoomList.html">Room List</a></li>
+            <li><a href="adminTreatmentList.html">Treatment List</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="nurse-list-container">
+            <h2>Nurse List</h2>
+            <button onclick="openAddModal()">Add Nurse</button>
+            <div class="search-container">
+                <input type="text" id="search-keyword" placeholder="Enter keyword to search">
+                <button onclick="searchNurses()">Search</button>
+            </div>
+            <table id="nurse-table">
+                <thead>
+                    <tr>
+                        <th>Nurse ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Contact Number</th>
+                        <th>Assigned Room ID</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="nurse-list">
+                    <!-- 护士列表会动态加载在这里 -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态窗口，用于添加和编辑护士信息 -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Edit Nurse</h2>
+            <div id="nurseID-container" style="display: none;">
+                <label for="edit-nurseID">Nurse ID (Read Only):</label>
+                <input type="text" id="edit-nurseID" readonly>
+            </div>
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name">
+            <label for="edit-gender">Gender:</label>
+            <input type="text" id="edit-gender">
+            <label for="edit-contactNumber">Contact Number:</label>
+            <input type="text" id="edit-contactNumber">
+            <label for="edit-assignedRoomID">Assigned Room ID:</label>
+            <input type="text" id="edit-assignedRoomID">
+            <button onclick="saveNurseUpdate()">Save</button>
+        </div>
+    </div>
+
+    <script src="adminNurseList.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Doctor List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="adminPatientList.html">Patient List</a></li>
+            <li><a href="adminDoctorList.html">Doctor List</a></li>
+            <li><a href="adminDepartmentList.html">Department List</a></li>
+            <li><a href="adminNurseList.html">Nurse List</a></li>
+            <li><a href="adminRoomList.html">Room List</a></li>
+            <li><a href="adminTreatmentList.html">Treatment List</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="doctor-list-container">
+            <h2>Doctor List</h2>
+            <div class="search-container">
+                <input type="text" id="search-keyword" placeholder="Enter keyword to search">
+                <button onclick="searchDoctors()">Search</button>
+            </div>
+            <table id="doctor-table">
+                <thead>
+                    <tr>
+                        <th>Doctor ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Department ID</th>
+                        <th>Contact Number</th>
+                        <th>Email</th>
+                        <th>Verified</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="doctor-list">
+                    <!-- 医生列表会动态加载在这里 -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态窗口，用于编辑医生信息 -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Edit Doctor Record</h2>
+            <label for="edit-doctorID">Doctor ID (Read Only):</label>
+            <input type="text" id="edit-doctorID" readonly>
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name">
+            <label for="edit-gender">Gender:</label>
+            <input type="text" id="edit-gender">
+            <label for="edit-departmentID">Department ID:</label>
+            <input type="text" id="edit-departmentID">
+            <label for="edit-contactNumber">Contact Number:</label>
+            <input type="text" id="edit-contactNumber">
+            <label for="edit-email">Email:</label>
+            <input type="text" id="edit-email">
+            <label for="edit-verified">Verified:</label>
+            <input type="text" id="edit-verified">
+            <button onclick="saveDoctorUpdate()">Save</button>
+        </div>
+    </div>
+
+    <script src="adminDoctorList.js"></script>
+</body>
+</html>
